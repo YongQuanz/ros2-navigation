@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="myrobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00118217937738441 -2.77555756156289E-17 -0.0425"
+        rpy="0 0 0" />
+      <mass
+        value="22.250089741607" />
+      <inertia
+        ixx="0.681724587592901"
+        ixy="-4.88641985523064E-17"
+        ixz="1.82554140397768E-19"
+        iyy="0.445417115774602"
+        iyz="-2.07266398876814E-18"
+        izz="1.09784177061851" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.175363141464161 -0.329970407365908 0.000195502659905145"
+        rpy="0 0 0" />
+      <mass
+        value="24.947602232463" />
+      <inertia
+        ixx="0.93887244092466"
+        ixy="-0.000150353699578311"
+        ixz="-0.000993306243107672"
+        iyy="0.536276512768652"
+        iyz="-4.23059198772847E-05"
+        izz="1.43826991238428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/front_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/front_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.175 0.33 -0.0425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="front_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-0.175363141464162 0.330029592634093 0.000195502659905034"
+        rpy="0 0 0" />
+      <mass
+        value="24.947602232463" />
+      <inertia
+        ixx="0.93887244092466"
+        ixy="-0.000150353699578311"
+        ixz="-0.000993306243107673"
+        iyy="0.536276512768652"
+        iyz="-4.23059198772847E-05"
+        izz="1.43826991238428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/front_right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/front_right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.175 -0.33 -0.0425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="rear_left_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.174636858535839 -0.329970407365908 0.000195502659904978"
+        rpy="0 0 0" />
+      <mass
+        value="24.947602232463" />
+      <inertia
+        ixx="0.93887244092466"
+        ixy="-0.000150353699578311"
+        ixz="-0.000993306243107672"
+        iyy="0.536276512768652"
+        iyz="-4.23059198772847E-05"
+        izz="1.43826991238428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/urdf/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh 
+          filename="package://robot_description/urdf/meshes/rear_left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.175 0.33 -0.0425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+  <link
+    name="rear_right_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.174636858535838 0.330029592634093 0.000195502659904923"
+        rpy="0 0 0" />
+      <mass
+        value="24.947602232463" />
+      <inertia
+        ixx="0.93887244092466"
+        ixy="-0.000150353699578311"
+        ixz="-0.000993306243107672"
+        iyy="0.536276512768652"
+        iyz="-4.23059198772847E-05"
+        izz="1.43826991238428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh 
+          filename="package://robot_description/urdf/meshes/rear_right_wheel_link.STL"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh 
+          filename="package://robot_description/urdf/meshes/rear_right_wheel_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.175 -0.33 -0.0425"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="1"
+      velocity="1" />
+  </joint>
+</robot>

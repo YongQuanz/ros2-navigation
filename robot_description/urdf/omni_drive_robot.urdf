@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<robot name="omni_drive_robot">
+
+  <!-- Robot base -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 0.1"/> <!-- Dimensions of the base: 50x50x10cm -->
+      </geometry>
+      <material name="atomic_tangerine">
+        <color rgba="1 0.6 0.4 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.5 0.1"/> <!-- Collision box same as visual -->
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="5.0"/> <!-- Base mass (in kg) -->
+      <inertia ixx="0.05" ixy="0.0" ixz="0.0" iyy="0.05" iyz="0.0" izz="0.05"/>
+    </inertial>
+  </link>
+
+  <!-- Omni wheel 1 -->
+  <link name="wheel_front_left">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/> <!-- Radius 5cm, Thickness 2cm -->
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.5"/> <!-- Wheel mass (in kg) -->
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Joint for wheel 1 -->
+  <joint name="joint_front_left" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_front_left"/>
+    <origin xyz="0.25 0.25 -0.05" rpy="0 0 0"/> <!-- Front left corner of the base -->
+    <axis xyz="0 1 0"/> <!-- Rotation axis -->
+  </joint>
+
+  <!-- Omni wheel 2 -->
+  <link name="wheel_front_right">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Joint for wheel 2 -->
+  <joint name="joint_front_right" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_front_right"/>
+    <origin xyz="0.25 -0.25 -0.05" rpy="0 0 0"/> <!-- Front right corner of the base -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Omni wheel 3 -->
+  <link name="wheel_back_left">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Joint for wheel 3 -->
+  <joint name="joint_back_left" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_back_left"/>
+    <origin xyz="-0.25 0.25 -0.05" rpy="0 0 0"/> <!-- Back left corner of the base -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Omni wheel 4 -->
+  <link name="wheel_back_right">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Joint for wheel 4 -->
+  <joint name="joint_back_right" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_back_right"/>
+    <origin xyz="-0.25 -0.25 -0.05" rpy="0 0 0"/> <!-- Back right corner of the base -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+</robot>
